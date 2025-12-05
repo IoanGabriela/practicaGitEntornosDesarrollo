@@ -28,7 +28,7 @@ namespace ejercicioTelegrama
             textoTelegrama = txtTelegrama.Text;
 
             // telegrama urgente?
-            if (chkUrgente.Checked)
+            if (rbUrgente.Checked)
             {
                 tipoTelegrama = 'u';
             }
@@ -38,8 +38,10 @@ namespace ejercicioTelegrama
             numPalabras = palabras.Length;
 
             //Si el telegrama es ordinario
-            if (tipoTelegrama == 'o')
+            if (rbOrdinario.Checked)
             {
+                tipoTelegrama = 'o';
+
                 if (numPalabras <= 10)
                 {
                     coste = 2.5;
